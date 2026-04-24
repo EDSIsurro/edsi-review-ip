@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #eef2ff 0%, #ffffff 50%, #fdf2f8 100%);
+}
+
+.card {
+  width: 100%;
+  max-width: 28rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow:
+    0 10px 30px -10px rgba(15, 23, 42, 0.15),
+    0 4px 10px -4px rgba(15, 23, 42, 0.08);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  color: #64748b;
+}
+
+.stars {
+  margin: 2rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.star {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.star:hover {
+  transform: scale(1.1);
+}
+
+.star:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+.star svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  fill: transparent;
+  stroke: #cbd5e1;
+  stroke-width: 1.5;
+  transition: fill 0.15s ease, stroke 0.15s ease;
+}
+
+.star--filled svg {
+  fill: #facc15;
+  stroke: #facc15;
+}
+
+.message {
+  margin: 1.5rem 0 0;
+  min-height: 1.25rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.25rem;
+  }
+  .card h1 {
+    font-size: 1.5rem;
+  }
+  .star svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
